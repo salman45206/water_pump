@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
             isV3On = true;
             binding.txtV3Off.setText("ON");
             binding.txtV1Off.setText("ON");
+            binding.grayPipe.setBackgroundTintList(ColorStateList.valueOf(Blue));
             binding.imgVerticalHydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Blue));
             binding.mainPipe.setBackgroundTintList(ColorStateList.valueOf(Blue));
             binding.v5TopPipe.setBackgroundTintList(ColorStateList.valueOf(Blue));
@@ -139,9 +140,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             isV3On = false;
             binding.txtV3Off.setText("OFF");
-            binding.imgVerticalHydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
+            binding.grayPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.mainPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.v5TopPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
+            binding.imgVerticalHydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.v4HydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.v5BottomPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.txtV4Off.setText("OFF");
@@ -197,8 +199,6 @@ public class MainActivity extends AppCompatActivity {
                 binding.pumpPipe,
                 binding.poolLengthyPipe,
                 binding.poolPipe,
-                binding.showerWater,
-                binding.waterAnimation
 
         };
         if (!isRunning) {
@@ -229,6 +229,8 @@ public class MainActivity extends AppCompatActivity {
             binding.imgVerticalHydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.v4HydrantPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.v5BottomPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
+            binding.grayPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
+            // Gray pipe
             if (isSprinklerOn) {
                 binding.showerWater.cancelAnimation();
                 binding.showerWater.setVisibility(View.GONE);

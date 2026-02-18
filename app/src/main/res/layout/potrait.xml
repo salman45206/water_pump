@@ -4,9 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/main"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/view"
@@ -16,12 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/txt_v2_off"
         android:layout_width="30dp"
         android:layout_height="20dp"
-        android:layout_marginTop="12sp"
         android:gravity="center"
         android:text="OFF"
         android:textColor="#E03d30"
@@ -29,7 +26,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textpool_pipe"
         app:layout_constraintStart_toStartOf="@+id/textpool_pipe"
-        app:layout_constraintTop_toTopOf="@+id/textpool_pipe" />
+        app:layout_constraintTop_toBottomOf="@+id/textpool_pipe" />
 
     <TextView
         android:id="@+id/textmain_pipe"
@@ -49,8 +46,8 @@
         android:id="@+id/txt_v1_off"
         android:layout_width="30dp"
         android:layout_height="20dp"
-        android:layout_marginTop="15sp"
         android:gravity="center"
+        android:layout_marginTop="15sp"
         android:text="OFF"
         android:textColor="#E03d30"
         android:textSize="8sp"
@@ -58,6 +55,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textmain_pipe"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/textmeter_pipe" />
+
 
 
     <TextView
@@ -83,6 +81,7 @@
         android:layout_marginEnd="18dp"
         android:gravity="center"
         android:rotation="90"
+
         android:text="OFF"
         android:textColor="#E03d30"
         android:textSize="8sp"
@@ -90,6 +89,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="@+id/textView16" />
+
 
     <TextView
         android:id="@+id/txt_v3_off"
@@ -149,16 +149,17 @@
         android:id="@+id/txt_v4_off"
         android:layout_width="30dp"
         android:layout_height="20dp"
-        android:layout_marginEnd="8dp"
         android:gravity="center"
         android:rotation="90"
         android:text="OFF"
+        android:layout_marginEnd="8dp"
         android:textColor="#E03d30"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textpump_horizontal"
         app:layout_constraintEnd_toStartOf="@+id/v4_hydrant"
         app:layout_constraintTop_toTopOf="@+id/textpump_horizontal" />
+
 
     <TextView
         android:id="@+id/textView16"
@@ -180,8 +181,8 @@
         android:id="@+id/txt_sprinkler_hydrant"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30sp"
         android:background="@drawable/hydrant"
+        android:layout_marginTop="30sp"
         app:layout_constraintEnd_toEndOf="@+id/v5_bottom_pipe"
         app:layout_constraintStart_toStartOf="@+id/v5_bottom_pipe"
         app:layout_constraintTop_toBottomOf="@+id/v5_bottom_pipe" />
@@ -206,33 +207,30 @@
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="@+id/v5_hydrant"
         app:layout_constraintTop_toBottomOf="@+id/v5_hydrant" />
-
     <TextView
         android:id="@+id/textpump_pipe"
         android:layout_width="60dp"
         android:layout_height="31dp"
-        android:layout_marginBottom="45sp"
         android:gravity="center"
+        android:layout_marginBottom="45sp"
         android:text="Pressure"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/second_meter"
         app:layout_constraintEnd_toStartOf="@+id/top_meter_picture_pipe"
         app:layout_constraintStart_toEndOf="@+id/meter_small_pipe" />
-
     <TextView
         android:id="@+id/textpool_lengthy_pipe"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="45sp"
         android:gravity="center"
         android:text="Flow"
+        android:layout_marginBottom="45sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/first_meter"
         app:layout_constraintEnd_toEndOf="@+id/first_meter"
         app:layout_constraintStart_toStartOf="@+id/first_meter" />
-
     <TextView
         android:id="@+id/textpool_horizontal_pipe"
         android:layout_width="60dp"
@@ -245,7 +243,6 @@
         app:layout_constraintBottom_toTopOf="@+id/img_pump"
         app:layout_constraintEnd_toEndOf="@+id/img_pump"
         app:layout_constraintStart_toEndOf="@+id/pump_pipe" />
-
     <View
         android:id="@+id/view20"
         android:layout_width="40dp"
@@ -331,35 +328,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/main_pipe"
         app:layout_constraintTop_toBottomOf="@+id/main_pipe" />
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/waterAnimation"
-        android:layout_width="40dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="40dp"
-        android:translationX="-10dp"
-        android:translationY="5dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_sprinkler_hydrant"
-        app:layout_constraintStart_toStartOf="@+id/txt_sprinkler_hydrant"
-        app:layout_constraintTop_toTopOf="@+id/txt_sprinkler_hydrant"
-        app:layout_constraintVertical_bias="0.0"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/waterfall" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/shower_water"
-        android:layout_width="69dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="38dp"
-        android:scaleY="-1"
-        android:layout_marginStart="15sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/txt_sprinkler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="@+id/img_sprinkler"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/water_shawor" />
 
     <View
         android:id="@+id/gray_pipe"
@@ -433,6 +401,7 @@
         app:layout_constraintTop_toTopOf="@+id/top_meter_picture_pipe" />
 
 
+
     <View
         android:id="@+id/pump_pipe"
         android:layout_width="25dp"
@@ -442,7 +411,6 @@
         app:layout_constraintEnd_toStartOf="@+id/img_pump"
         app:layout_constraintTop_toTopOf="@+id/img_pump"
         app:layout_constraintVertical_bias="0.545" />
-
     <View
         android:id="@+id/pump_horizontal"
         android:layout_width="8dp"
@@ -473,7 +441,6 @@
         app:layout_constraintEnd_toEndOf="@+id/pool_lengthy_pipe"
         app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="@+id/pool_lengthy_pipe" />
-
     <ImageView
         android:id="@+id/second_meter"
         android:layout_width="50dp"
@@ -511,8 +478,8 @@
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="City water"
-        android:textColor="@color/white"
         android:textSize="10sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imagepump_horizontal"
         app:layout_constraintEnd_toEndOf="@+id/imagepump_horizontal"
@@ -556,7 +523,6 @@
         app:layout_constraintEnd_toEndOf="@+id/v2_hydrant"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/v2_hydrant" />
-
     <View
         android:id="@+id/view18"
         android:layout_width="36dp"
@@ -683,6 +649,7 @@
         android:layout_marginBottom="8sp"
         android:background="@drawable/button_shape"
         android:text="66.70 "
+
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_test"
         app:layout_constraintEnd_toEndOf="@+id/btn_test"
@@ -691,6 +658,7 @@
     <TextView
         android:layout_width="30dp"
         android:layout_height="30dp"
+
         android:layout_marginEnd="4dp"
         android:gravity="center"
         android:text="TS2"
@@ -700,7 +668,6 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_number"
         app:layout_constraintTop_toTopOf="@+id/btn_number"
         app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="40dp"
@@ -738,7 +705,6 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_start"
         app:layout_constraintEnd_toEndOf="@+id/btn_start"
         app:layout_constraintStart_toStartOf="@+id/btn_start" />
-
     <TextView
         android:id="@+id/txt_density"
         android:layout_width="50dp"
@@ -749,7 +715,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_prcantage"
         app:layout_constraintEnd_toStartOf="@+id/btn_prcantage"
         app:layout_constraintTop_toTopOf="@+id/btn_prcantage" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton3"
         android:layout_width="70dp"
@@ -761,16 +726,15 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_prcantage"
         app:layout_constraintEnd_toEndOf="@+id/btn_prcantage"
         app:layout_constraintStart_toStartOf="@+id/btn_prcantage" />
-
     <TextView
         android:id="@+id/txt_ember"
         android:layout_width="64dp"
         android:layout_height="29dp"
-        android:layout_marginBottom="15sp"
         android:gravity="center"
         android:text="Embers"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toTopOf="@+id/appCompatButton3"
         app:layout_constraintEnd_toEndOf="@+id/appCompatButton3"
         app:layout_constraintStart_toStartOf="@+id/appCompatButton3" />
@@ -794,8 +758,8 @@
         android:gravity="center"
         android:text="Pool"
         android:textColor="@color/white"
-        android:textSize="20sp"
         android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_pool"
         app:layout_constraintEnd_toEndOf="@+id/txt_pool"
         app:layout_constraintStart_toStartOf="@+id/txt_pool"
@@ -807,10 +771,11 @@
         android:layout_width="101dp"
         android:layout_height="30dp"
         android:gravity="center"
+
+        android:textStyle="bold"
         android:text="20,000 Gallons "
         android:textColor="@color/white"
         android:textSize="10dp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -819,9 +784,9 @@
         android:id="@+id/textimg_vertical_hydrant_pipe"
         android:layout_width="69dp"
         android:layout_height="29dp"
-        android:layout_marginBottom="15sp"
         android:gravity="center"
         android:text="Roof"
+        android:layout_marginBottom="15sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_temperature"
@@ -841,4 +806,7 @@
         app:layout_constraintEnd_toStartOf="@+id/appCompatButton3"
         app:layout_constraintTop_toTopOf="@+id/appCompatButton3"
         app:layout_constraintVertical_bias="0.285" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
