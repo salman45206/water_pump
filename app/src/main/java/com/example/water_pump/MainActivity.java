@@ -146,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
             binding.v5BottomPipe.setBackgroundTintList(ColorStateList.valueOf(Gray));
             binding.txtV4Off.setText("OFF");
             binding.txtV5Off.setText("OFF");
+            if (isSprinklerOn) {
+                binding.showerWater.cancelAnimation();
+                binding.showerWater.setVisibility(View.GONE);
+                isSprinklerOn = false;
+            } if(isHydrantOn){
+                binding.waterAnimation.cancelAnimation();
+                binding.waterAnimation.setVisibility(View.GONE);
+                isHydrantOn = false;
+            }
             isV4On = false;
             isV5On = false;
         }
